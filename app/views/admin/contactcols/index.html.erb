@@ -1,0 +1,72 @@
+<h1 class="marginB10 f_left w100pr100">Contact us Tab management</h1>
+
+<div class="marginB10 f_left admin_link">
+<%#= link_to 'New Homecol', new_admin_homecol_path %>
+  <%= link_to 'Back to Greasebuster Tabs management', '../admin' %>
+</div>
+
+<div class="clr"></div>
+
+
+<% @admin_contactcols.each do |admin_contactcol| %>
+  <div class="f_left " >
+
+    <div class="f_left c_cf266689 bold marginB10">Image&nbsp;:&nbsp</div>
+    <div class="f_left width_auto w100pr100">
+      <div class="img_admin_index">
+    <%= image_tag admin_contactcol.image.url() %>
+      </div>
+    </div><div>
+
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="marginB5">
+      <div class="f_left c_cf266689 bold">Name&nbsp;:&nbsp</div>
+      <div class="f_left width_auto w100pr100">
+        <%= admin_contactcol.name %>
+      </div>
+    </div>
+
+    <div class="marginB5">
+      <div class="f_left c_cf266689 bold">Address&nbsp;:&nbsp</div>
+      <div class="f_left width_auto w100pr100">
+        <%= admin_contactcol.address %>
+      </div>
+    </div>
+
+    <div class="marginB5">
+      <div class="f_left c_cf266689 bold">City&nbsp;:&nbsp</div>
+      <div class="f_left width_auto w100pr100">
+        <%= admin_contactcol.city %>
+      </div>
+    </div>
+
+    <div class="marginB5">
+      <div class="f_left c_cf266689 bold">Phone&nbsp;:&nbsp</div>
+      <div class="f_left width_auto w100pr100">
+        <%= admin_contactcol.phone %>
+      </div>
+    </div>
+
+    <div class="clr"></div>
+
+<div class="marginB5">
+    <div class="f_left c_cf266689 bold marginT10">Description&nbsp;:&nbsp</div>
+    <div class="f_left width_auto w100pr100"> 
+      <%= admin_contactcol.description.html_safe %>
+    </div>
+</div>
+
+    <div class="clr"></div>
+
+    <div class="marginT10 marginB10 f_left width_auto admin_link">
+      <%= link_to 'Edit', edit_admin_contactcol_path(admin_contactcol) %>
+  <%#= link_to 'Destroy', admin_contactcol, confirm: 'Are you sure?', method: :delete %>
+    </div>
+
+  </div> 
+<% end %>
+
+<div class="clr"></div>

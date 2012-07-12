@@ -1,0 +1,95 @@
+
+
+
+    <% @admin_contactcols.each do |admin_contactcol| %>
+      <div class="top_photo_banniere">
+        <img src="assets/bannier_content2.png" alt="Geasebusters banner" />
+        <span class="top_photo_banniere_titre">contact us</span>
+      </div>
+
+      <div class="top_photo" width="970" height="170">
+        <%= image_tag admin_contactcol.image.url(:medium) %> 
+      </div>
+
+      <div id="coordonnees">
+        <span id="coordonnees_titre">
+          <%= admin_contactcol.name %> <br />
+        </span>
+
+        <span id="coordonnees_adresse">
+          <%= admin_contactcol.address %> <br />
+          <%= admin_contactcol.city %> <br />
+          usa <br />
+          <span id="telephone"><%= admin_contactcol.phone %></span>
+        </span>
+      </div>
+
+      <span id="geoloc">
+        <script type="text/javascript" src="http://www.supportduweb.com/google_map_gen.js?lati=40.001517&long=-75.293427&zoom=15&width=623&height=219&map_type=normal&map_btn_normal=yes&map_btn_satelite=yes&map_btn_mixte=yes&marqueur=yes&info_bulle="></script>
+      </span>
+
+      <div class="clear"></div>
+
+      <h4 id="contact_us_h4">Request a quote</h4>
+
+      <div id="quote_text">
+        <%= admin_contactcol.description.html_safe %>
+      </div>
+    <% end %>
+    <form action="#" method="post">
+      <div id="formulaire">
+        <label for="contact_name">Contact name</label> <input class="formulaire_input" id="contact_name" type="text" name="contact_name" maxlength="255" /> <br />
+        <label for="company_name">Company name</label> <input class="formulaire_input" id="company_name" type="text" name="company_name" maxlength="255" /> <br />      
+        <label for="address">Address</label> <input class="formulaire_input" id="address" type="text" name="adresse" maxlength="255" /> <br />
+        <label for="state">State</label> <input class="formulaire_input" id="state" type="text" name="state" maxlength="255" /> <br />
+        <label for="zip_code">Zip Code</label> <input class="formulaire_input" id="zip_code" type="text" name="zip_code" maxlength="255" /> <br />
+        <label for="phone_number">Phone number</label> <input class="formulaire_input" id="phone_number" type="text" name="phone_number" maxlength="255" /> <br />
+        <label for="fax_number">Fax number</label> <input class="formulaire_input" id="fax_number" type="text" name="fax_number" maxlength="255" /> <br />
+        <label for="email_address">Email address</label> <input class="formulaire_input" id="email_address" type="text" name="email_adress" maxlength="255" /> <br />
+      </div>
+
+      <div class="clear"></div>
+
+      <div id="checkbox_choice_part">
+        <span id="checkbox_proposal_title">We are looking for a proposal for :</span>
+
+        <div id="checkbox_proposal_choice">
+          <ul>
+            <li>
+              <input id="choice1" value="choice1" type="radio" name="choice" /><label for="choice1"> Kitchen Exhaust Cleaning</label>
+            </li>
+            <li>
+              <input id="choice2" value="choice2" type="radio" name="choice" /><label for="choice2"> Roof Protection / Grease Containment Systems</label>
+            </li>
+            <li>
+              <input id="choice3" value="choice3" type="radio" name="choice" /><label for="choice3"> Concrete & Other Cleaning</label>
+            </li>
+            <li>
+              <input id="choice4" value="choice4" type="radio" name="choice" /><label for="choice4"> Exhaust Fan Hinge Installation</label>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="clr"></div>                
+
+      <div id="additional_information_part">
+        <div id="additional_information_title">
+          Any additional information you would <br /> like to share with us : 
+        </div>
+        <textarea rows="5" cols="22"></textarea>
+
+      </div>
+
+      <div class="clear"></div>
+
+      <span class="submit_button">
+        <input type="submit" value="Send" />
+      </span>
+
+    </form>
+
+    <div class="clear"></div>
+
+    <div class="home_under_box formSide" ></div>
+    <div class="clear"></div>
