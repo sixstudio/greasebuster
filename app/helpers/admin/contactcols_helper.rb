@@ -1,2 +1,0 @@
-module Admin::ContactcolsHelper
-end

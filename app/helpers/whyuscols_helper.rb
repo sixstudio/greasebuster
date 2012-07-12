@@ -1,2 +1,0 @@
-module WhyuscolsHelper
-end
