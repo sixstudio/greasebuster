@@ -1,0 +1,63 @@
+
+
+
+    <% @servicecols.each do |servicecol| %>
+      <div class="top_photo_banniere">
+        <img src="assets/bannier_content2.png" alt="Geasebusters banner" />
+        <span class="top_photo_banniere_titre">Our services</span>
+      </div>
+
+      <div class="top_photo" width="970" height="170">
+        <%= image_tag servicecol.image.url(:medium) %>
+      </div>
+
+      <h1> <%= servicecol.title %></h1>
+      <div class="clear"></div>
+
+      <div id="our_services_content_bloc_left">
+
+        <%= servicecol.content.html_safe %>
+
+      </div>
+
+      <div class="content_bloc_right">
+        <div class="content_bloc_right_box1">
+
+          <div class="content_bloc_right_banniere">
+            <img class="content_bloc_right_banniere_box1_image" src="assets/our_services_content_bloc_right_banniere.png" alt="Geasebusters banner" />
+            <span class="content_bloc_right_banniere_titre">why us</span>
+          </div>   
+
+          <img class="content_bloc_right_photo" src="assets/our_services_content_bloc_right_box1_photo.jpg" alt="Geasebusters Our process gets it right photo" />
+
+          <h4>our process gets it right!</h4>
+
+          <div class="content_bloc_right_text">
+            For more information about why you should contact GreaseBuster Philly,
+            <a class="lien_click_here" href="why-us">click here.</a>.
+          </div>
+        </div>
+
+        <div class="content_bloc_right_box2">
+
+          <div class="content_bloc_right_banniere" id="">
+            <img class="content_bloc_right_banniere_box2_image" src="assets/our_services_content_bloc_right_banniere2.png" alt="our_services_content_bloc_right_banniere.png" />
+            <span class="content_bloc_right_banniere_titre">About Us</span>
+          </div>   
+
+          <img class="content_bloc_right_photo" src="assets/our_services_content_bloc_right_box2_photo.jpg" alt="our process gets it right photo" />
+
+          <h4>we're the experts</h4>
+
+          <div class="content_bloc_right_text">
+            To find out more about our locally owned and operated branch,
+            <a class="lien_click_here" href="about-us">click here.</a>.
+          </div>
+        </div>
+
+        <div class="content_bloc_right_box3">
+          <a href="contact-us"><img src="assets/contact_button.png" alt="Get a free quote, contact us" /></a>
+        </div>
+      </div>
+      <div class="clear"></div>
+    <% end %>

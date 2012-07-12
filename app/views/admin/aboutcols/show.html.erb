@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @aboutcol.title %>
+</p>
+
+<p>
+  <b>Img:</b>
+  <%= image_tag @aboutcol.image.url(:medium) %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @aboutcol.content.html_safe %>
+</p>
+
+
+
+
+<%= link_to 'Edit', edit_admin_aboutcol_path(@aboutcol) %> |
+<%= link_to 'Back', admin_aboutcols_path %>

@@ -1,0 +1,84 @@
+
+
+    <div class="top_photo_banniere">
+      <img src="assets/bannier_content2.png" alt="Geasebusters banner" />
+      <span class="top_photo_banniere_titre">About us</span>
+    </div>
+    <% @aboutcols.each do |aboutcol| %>
+      <div class="top_photo" width="970" height="170">
+        <%= image_tag aboutcol.image.url(:medium) %>
+      </div>
+
+
+      <h1>THE GREASBUSTERS - SINCE 1971</h1>
+
+      <div id="about_us_content_bloc">
+
+
+        <div class="clear"></div>
+
+        <h4><%= aboutcol.title %></h4>
+
+        <%= aboutcol.content.html_safe %>
+      </div>
+    <% end %>
+    <div class="clear"></div>
+
+    <table class="about_us_table">
+      <tr>
+        <td class="tab_aboutus" valign="top">
+          <div class="about_us_bloc_left_bottom">
+
+            <div class="about_us_bloc_left_bottom_banniere1">
+              <img class="about_us_bloc_left_bottom_banniere_box1_image1" src="assets/our_services_content_bloc_right_banniere2.png" alt="Geasebusters banner" />
+              <span class="about_us_bloc_left_bottom_banniere_titre1">services</span>
+            </div>   
+
+            <img class="about_us_bloc_left_bottom_photo1" src="assets/our_services_content_bloc_right_box1_photo.jpg" alt="Geasebusters Our process gets it right photo" />
+            <div class="clear"></div>
+
+            <div class="about_us_bloc_left_bottom_text1">
+              <h4 class="">we got it covered</h4>
+              <div class="clear"></div>
+              <p>
+                To learn more about our services,
+                <a class="lien_click_here" href="services">click here.</a>
+              </p>
+            </div>
+          </div>
+        </td>
+
+        <td class="colonne_middle_aboutus"></td>
+
+        <td class="tab_aboutus" valign="top">
+
+          <div class="about_us_bloc_left_bottom">
+
+            <div class="about_us_bloc_left_bottom_banniere">
+              <img class="about_us_bloc_left_bottom_banniere_box1_image2" src="assets/our_services_content_bloc_right_banniere.png" alt="Geasebusters banner" />
+              <span class="about_us_bloc_left_bottom_banniere_titre2">why us</span>
+            </div>   
+
+            <img class="about_us_bloc_left_bottom_photo2" src="assets/our_services_content_bloc_right_box1_photo.jpg" alt="Geasebusters Our process gets it right photo" />
+            <div class="clear"></div>
+
+
+            <div class="about_us_bloc_left_bottom_text2">
+              <h4 class="about_us_bloc_left_bottom_h4_2">our process gets it right!</h4>
+              <div class="clear"></div>
+              <div>
+                For more information about why you should contact GreaseBuster Philly,
+                <a class="lien_click_here" href="why-us">click here.</a>
+              </div>
+            </div>
+          </div>
+        </td>
+
+      </tr>
+    </table>
+
+    <div class="about_us_bottom_logo">
+      <img src="assets/logo_content.png" alt="greasebusters logo"/>
+    </div>
+
+  

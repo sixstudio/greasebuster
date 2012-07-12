@@ -1,0 +1,2 @@
+module AboutcolsHelper
+end
