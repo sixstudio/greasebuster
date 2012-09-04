@@ -1,5 +1,5 @@
 allow from all
-RewriteBase /buster/public
+RewriteBase /greasebuster/public
 
 
 RewriteRule ^$ index.html [QSA]
